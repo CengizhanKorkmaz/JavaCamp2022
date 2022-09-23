@@ -123,8 +123,57 @@ public class Main {
         System.out.println(message1.substring(2));
         System.out.println(message1.substring(2,4));
 
-
-
+        sayiBulmaca();
+        String yeniMesaj=message.substring(0,2);
+        System.out.println(yeniMesaj);
+        int sayiToplami=topla();
+        int sayiToplamlari=toplama(4,5);
 
     }
+
+    public static void sayiBulmaca(){
+        int[] sayilar = new int[]{1,2,3,5,7,9,0};
+        int aranacak = 3;
+        boolean varMi=false;
+        for(int sayi:sayilar){
+            varMi =true;
+            break;
+        }
+        if (varMi){
+           mesajVer("Sayı mevcuttur "+ aranacak);
+        }else {
+            System.out.println("Sayı mevcut değildir "+aranacak);
+        }
+    }
+    public static void mesajVer(String mesaj){
+        System.out.println(mesaj);
+    }
+    public static void ekle(){
+        System.out.println("Eklendi");
+    }
+    public static void sil(){
+        System.out.println("Silindi");
+    }
+    public static void guncelle(){
+        System.out.println("Güncellendi");
+    }
+    public static int topla(){
+        return 5+10;
+    }
+    public static int toplama(int sayi1,int sayi2){
+        return sayi1+sayi2;
+    }
+    public static int topla2(int... sayilar){
+        int toplam=0;
+        for(int sayi:sayilar){
+            toplam+=sayi;
+        }
+        return toplam;
+    }
+    CustomerManager customerManager = new CustomerManager();
+    CustomerManager customerManager2=new CustomerManager();
+    customerManager.Add();
+    customerManager.Update();
+    customerManager.Delete();
+
 }
